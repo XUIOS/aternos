@@ -1,14 +1,17 @@
-hidden = [".config", "package-lock.json"]
-compile = "clear"
 run = "npm start"
+hidden = [".config", "package-lock.json"]
+
+[nix]
+channel = "stable-22_11"
+
+[env]
+XDG_CONFIG_HOME = "/home/runner/.config"
+PATH = "/home/runner/$REPL_SLUG/.config/npm/node_global/bin:/home/runner/$REPL_SLUG/node_modules/.bin"
+npm_config_prefix = "/home/runner/$REPL_SLUG/.config/npm/node_global"
 
 [gitHubImport]
 	requiredFiles = [".replit", "replit.nix", ".config", "package.json", "pnpm-lock.yaml"]
 
-
-
-[nix]
-	channel = "stable-22_11"
 
 
 [packager]
