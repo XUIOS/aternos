@@ -5,24 +5,18 @@
 	"version": "0.0.0",
 	"scripts": {
 		"start": "node dist/index.js",
-		"dev": "tsc -w",
-		"build": "tsc",
-		"postinstall": "npm run build",
-		"test": "jest"
+		"dev": "node --inspect --import tsx ./src/index.ts",
+		"build": "node build.js"
 	},
 	"dependencies": {
-		"mineflayer": "3.11.0",
-		"minecraft-protocol": "1.44.0",
-		"prismarine-viewer": "1.25.0"
+		"mineflayer": "^4.14.0",
+		"tsx": "^4.7.1"
 	},
 	"devDependencies": {
-		"@types/jest": "^29.5.12",
-		"@types/node": "^20.11.19",
-		"jest": "^29.7.0",
-		"ts-jest": "^29.1.2",
-		"typescript": "^5.3.3"
+		"@types/node": "^20.11.24",
+		"typescript": "^5.4.2"
 	},
 	"engines": {
-		"node": ">=18.0.0"
+		"node": "^22.0.0"
 	}
 }

@@ -46,23 +46,9 @@ const createBot = () => {
 		host: CONFIG.client.host,
 		port: +CONFIG.client.port,
 		username: CONFIG.client.username,
-		version: '1.16.5',
+		version: '1.20.1', // تحديد إصدار Minecraft
 		keepAlive: true,
-		closeTimeout: 24000,
-		checkTimeoutInterval: 60000,
-		// إضافة خيارات إضافية للتوافق مع Replit
-		connectTimeout: 30000,
-		keepAliveTimeout: 30000,
-		keepAliveInterval: 10000,
-		// تعطيل بعض الميزات التي قد تسبب مشاكل
-		hideErrors: false,
-		checkTimeoutInterval: 60000,
-		// إضافة خيارات إضافية للاتصال
-		auth: 'offline',
-		// تعطيل بعض الميزات المتقدمة
-		disableChatSigning: true,
-		// إضافة خيارات إضافية للتوافق
-		useNativeTransport: false
+		closeTimeout: 24000
 	});
 
 	bot.once('error', error => {
