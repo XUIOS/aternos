@@ -9,7 +9,7 @@
 		"build": "node build.js"
 	},
 	"dependencies": {
-		"mineflayer": "^4.20.0",
+		"mineflayer": "^4.14.0",
 		"tsx": "^4.7.1"
 	},
 	"devDependencies": {
