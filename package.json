@@ -4,17 +4,17 @@
 	"name": "aterbot",
 	"version": "0.0.0",
 	"scripts": {
-		"start": "tsx ./src/index.ts",
+		"start": "node dist/index.js",
 		"dev": "node --inspect --import tsx ./src/index.ts",
-		"build": "tsc"
+		"build": "node build.js"
 	},
 	"dependencies": {
 		"mineflayer": "^4.20.0",
 		"tsx": "^4.7.1"
 	},
 	"devDependencies": {
-		"@types/node": "^20.17.28",
-		"typescript": "^5.8.2"
+		"@types/node": "^20.11.24",
+		"typescript": "^5.4.2"
 	},
 	"engines": {
 		"node": ">=18.0.0"

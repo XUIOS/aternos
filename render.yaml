@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: aterbot
+    env: node
+    buildCommand: npm install && node build.js
+    startCommand: npm start
+    envVars:
+      - key: NODE_VERSION
+        value: 18.x
+    autoDeploy: true 
