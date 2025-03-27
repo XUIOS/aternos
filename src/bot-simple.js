@@ -1,6 +1,10 @@
 import Mineflayer from 'mineflayer';
+import fs from 'node:fs';
+import path from 'node:path';
 import { sleep, getRandom } from "./utils.js";
-import CONFIG from "../config.json";
+
+// قراءة ملف التكوين بطريقة متوافقة مع جميع إصدارات Node.js
+const CONFIG = JSON.parse(fs.readFileSync(new URL('../config.json', import.meta.url), 'utf8'));
 
 let loop;
 let bot;
