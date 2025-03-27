@@ -46,9 +46,10 @@ const createBot = () => {
 		host: CONFIG.client.host,
 		port: +CONFIG.client.port,
 		username: CONFIG.client.username,
-		version: '1.20.1', // تحديد إصدار Minecraft
+		version: '1.19.2',
 		keepAlive: true,
-		closeTimeout: 24000
+		closeTimeout: 24000,
+		checkTimeoutInterval: 60000
 	});
 
 	bot.once('error', error => {
