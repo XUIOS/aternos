@@ -18,8 +18,15 @@ const files = [
 
 for (const file of files) {
   if (fs.existsSync(file.src)) {
-    fs.copyFileSync(file.src, file.dest);
-    console.log(`تم نسخ ${file.src} إلى ${file.dest}`);
+    // قراءة محتوى الملف
+    let content = fs.readFileSync(file.src, 'utf8');
+    
+    // تعديل مسارات الاستيراد لإزالة -simple من المسارات
+    content = content.replace(/from ["']\.\/([a-z-]+)-simple\.js["']/g, 'from "./$1.js"');
+    
+    // كتابة المحتوى المعدل إلى الملف الهدف
+    fs.writeFileSync(file.dest, content);
+    console.log(`تم نسخ وتعديل ${file.src} إلى ${file.dest}`);
   } else {
     console.error(`خطأ: الملف ${file.src} غير موجود`);
   }
